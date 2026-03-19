@@ -1,0 +1,342 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #0f4c5c, #1b7f7f);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+            position: relative;
+        }
+
+        /* Efecto de fondo suave */
+        body::before {
+            content: "💙";
+            position: fixed;
+            font-size: 20rem;
+            opacity: 0.03;
+            bottom: -50px;
+            right: -50px;
+            transform: rotate(15deg);
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "🌊";
+            position: fixed;
+            font-size: 25rem;
+            opacity: 0.03;
+            top: -80px;
+            left: -60px;
+            transform: rotate(-10deg);
+            pointer-events: none;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.93);
+            backdrop-filter: blur(15px);
+            border-radius: 48px 48px 40px 40px;
+            box-shadow: 0 30px 50px rgba(0, 30, 30, 0.4), 0 0 0 2px #9fd1d1 inset;
+            padding: 28px 22px;
+            position: relative;
+            z-index: 10;
+            border: 1px solid #c2e0e0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            color: #116464;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            font-family: 'Georgia', serif;
+            border-bottom: 2px solid #3a9b9b;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        .header h1 span {
+            font-weight: 700;
+            color: #0b4f4f;
+        }
+
+        .header p {
+            color: #3a7a7a;
+            font-size: 1rem;
+            margin-top: 8px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        /* Foto - AHORA CON IMAGEN PREDETERMINADA */
+        .foto-section {
+            margin: 20px 0 25px;
+            text-align: center;
+        }
+
+        .foto-label {
+            font-size: 0.95rem;
+            color: #0f5c5c;
+            margin-bottom: 12px;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+        }
+
+        .foto-marco {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            border-radius: 35% 65% 70% 30% / 44% 30% 70% 56%;
+            background: linear-gradient(145deg, #1b7f7f, #359999);
+            padding: 6px;
+            box-shadow: 0 15px 25px rgba(0, 50, 50, 0.4);
+            border: 3px solid white;
+        }
+
+        .foto-interior {
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            background: #d9f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border: 2px solid white;
+        }
+
+        #imagenSubida {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Mensaje de amor */
+        .mensaje-amor {
+            background: #ecfbfb;
+            padding: 28px 22px;
+            border-radius: 40px 40px 40px 12px;
+            margin: 25px 0;
+            border: 2px solid #aad0d0;
+            box-shadow: 0 10px 0 #398f8f;
+        }
+
+        .mensaje-amor p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #094545;
+            font-family: 'Georgia', serif;
+            text-align: left;
+        }
+
+        .mensaje-amor .firma {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 1.1rem;
+            color: #1b6b6b;
+            font-style: italic;
+            border-top: 1px solid #9fc9c9;
+            padding-top: 12px;
+        }
+
+        /* Botón interactivo - AHORA CON MENSAJES CORTOS */
+        .btn-mensajes {
+            background: #f0ffff;
+            border: 3px solid #1b7f7f;
+            color: #1b7f7f;
+            font-size: 1.4rem;
+            padding: 16px 20px;
+            border-radius: 60px;
+            width: 100%;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 6px 0 #0e5a5a;
+            transition: 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .btn-mensajes:active {
+            transform: translateY(5px);
+            box-shadow: 0 1px 0 #0e5a5a;
+        }
+
+        /* Caja donde aparecen los mensajes */
+        .caja-mensajes {
+            background: #e0f2f2;
+            border-radius: 30px;
+            padding: 20px;
+            margin: 15px 0;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.3rem;
+            color: #094545;
+            font-family: 'Georgia', serif;
+            border: 2px dashed #1b7f7f;
+            transition: all 0.3s;
+        }
+
+        /* Música - CON REPRODUCCIÓN AUTOMÁTICA */
+        .musica-section {
+            background: #e0f2f2;
+            border-radius: 30px;
+            padding: 18px;
+            margin: 20px 0;
+        }
+
+        .musica-titulo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #0f5454;
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        #inputAudio {
+            display: none;
+        }
+
+        .btn-audio {
+            background: #1b7f7f;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 4px 0 #0c5555;
+            border: 2px solid #b3e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-audio:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 #0c5555;
+        }
+
+        #reproductorAudio {
+            width: 100%;
+            margin-top: 15px;
+            border-radius: 30px;
+            background: #ecfbfb;
+        }
+
+        /* WhatsApp */
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 18px;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 20px 0 15px;
+            box-shadow: 0 6px 0 #128C7E;
+            border: 3px solid white;
+            transition: 0.1s;
+        }
+
+        .btn-whatsapp:active {
+            transform: translateY(5px);
+            box-shadow: 0 1px 0 #128C7E;
+        }
+
+        .footer {
+            text-align: center;
+            color: #398f8f;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-style: italic;
+            border-top: 2px solid #c2e0e0;
+            padding-top: 18px;
+        }
+
+        /* Botón flotante WhatsApp */
+        .whatsapp-flotante {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            text-decoration: none;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            border: 3px solid white;
+            z-index: 100;
+            animation: latido 2s infinite;
+        }
+
+        @keyframes latido {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        /* Partículas flotantes */
+        .particulas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particula {
+            position: absolute;
+            font-size: 1.5rem;
+            opacity: 0.4;
+            animation: flotar 6s linear forwards;
+        }
+
+        @keyframes flotar {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            20% { opacity: 0.6; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 400px) {
+            .container { padding: 20px 16px; }
+            .header h1 { font-size: 2rem; }
+            .foto-marco { width: 170px; height: 170px; }
+        }
+  
