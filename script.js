@@ -9,13 +9,13 @@
 
             // MENSAJES CORTOS (cambia estos por los que quieras)
             const mensajes = [
-                "💙 Amor no olvides todo lo que vivimos",
-                "🌊 que no se apague el amor ",
-                "💫 aun hay esparanza Nathalia",
+                "💙 Amor no olvides todo lo que vivimos en Mallasilla",
+                "🌊 No dejemos que no se apague lo nuestro",
+                "💫 Aun hay esparanza Nathalia",
                 "✨ Nada está perdido, amor mío",
-                "💕 Nathy, tú eres lo más importante",
+                "💕 Nathy, tu eres muy importante para mi",
                 "🌟 Siempre voy a estar aquí",
-                "💙 Te cuidare amor ",
+                "💙 Te cuidare amor mio ",
                 "🌊 Gracias por todo el tiempo que me diste",
                 "💫 Tú y yo, siempre",
                 "✨ Eres mi paz",
@@ -59,7 +59,7 @@
             });
 
             // Intentar reproducir audio automáticamente (puede no funcionar en algunos navegadores)
-            reproductor.volume = 0.5; // Volumen al 50%
+            reproductor.volume = 90; // Volumen al 100%
 
             // Partículas de fondo automáticas
             setInterval(() => {
